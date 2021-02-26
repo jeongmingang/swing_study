@@ -20,7 +20,7 @@ public class JpanelEx extends JFrame implements ActionListener {
 	private JPanel contentPane;
 	private JButton btnGetDept;
 	private JButton btnSetDept;
-	private DeptPanel pDept;
+	private DeptPanel pDept; 
 	private JButton btnClear;
 
 	public JpanelEx() {
