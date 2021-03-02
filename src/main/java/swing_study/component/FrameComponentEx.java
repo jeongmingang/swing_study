@@ -15,6 +15,7 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+@SuppressWarnings({ "serial", "unused" })
 public class FrameComponentEx extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
@@ -35,10 +36,7 @@ public class FrameComponentEx extends JFrame implements ActionListener {
 		setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout(0, 1, 0, 0));
 
-		btn1 = new JButton("Magenta/Yellow Butten");
-		btn1.setForeground(Color.MAGENTA);
-		btn1.setBackground(Color.YELLOW);
-		btn1.setFont(new Font("Arial", Font.ITALIC, 20));
+		btn1 = createBtn();
 		contentPane.add(btn1);
 
 		btn2 = new JButton("Disabled Butten");
@@ -51,7 +49,20 @@ public class FrameComponentEx extends JFrame implements ActionListener {
 		contentPane.add(btn3);
 	}
 
+	public JButton createBtn() {
+		btn1 = new JButton("Magenta/Yellow Butten");
+		btn1.addActionListener(this);
+		btn1.setForeground(Color.MAGENTA);
+		btn1.setBackground(Color.YELLOW);
+		btn1.setFont(new Font("Arial", Font.ITALIC, 20));
+		contentPane.add(btn1);
+		return btn1;
+	}
+
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btn1) {
+			actionPerformedBtn(e);
+		}
 		if (e.getSource() == btn2) {
 			actionPerformedBtn2(e);
 		}
@@ -75,13 +86,21 @@ public class FrameComponentEx extends JFrame implements ActionListener {
 	protected void actionPerformedBtn2(ActionEvent e) {
 		if (btn1 != null) {
 			contentPane.remove(btn1);
+			btn1 = null;
 			revalidate();
 		} else {
-			if (btn1.isVisible()) {
-				btn1.setVisible(false);
-			} else {
-				btn1.setVisible(true);
-			}
+			btn1 = createBtn();
+			contentPane.add(btn1, 0);
+			revalidate();
+
+		}
+	}
+	
+	protected void actionPerformedBtn(ActionEvent e) {
+		if (btn3.isVisible()) {
+			btn3.setVisible(false);
+		} else {
+			btn3.setVisible(true);
 		}
 	}
 }
