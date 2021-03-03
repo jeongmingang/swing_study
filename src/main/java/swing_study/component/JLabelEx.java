@@ -29,7 +29,7 @@ public class JLabelEx extends JFrame implements MouseListener {
 		initialize();
 	}
 	private void initialize() {
-		setTitle("JLabel");
+		setTitle("JLabel예제");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 478, 433);
 		contentPane = new JPanel();

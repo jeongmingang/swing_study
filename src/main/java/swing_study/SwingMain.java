@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import swing_study.component.FrameComponentEx;
+import swing_study.component.JButtonEx;
 import swing_study.component.JLabelEx;
 import swing_study.frame.ContentPaneEx;
 import swing_study.frame.JpanelEx;
@@ -39,7 +40,7 @@ public class SwingMain extends JFrame implements ActionListener {
 	private JPanel pComponent1;
 	private JButton btn1;
 	private JButton btn2;
-	private JButton btn3;
+	private JPanel pCheckRadio;
 
 	/**
 	 * Launch the application.
@@ -116,14 +117,19 @@ public class SwingMain extends JFrame implements ActionListener {
 		btn1.addActionListener(this);
 		pComponent1.add(btn1);
 		
-		btn2 = new JButton("JButton");
+		btn2 = new JButton("JButton & JToggleButton");
+		btn2.addActionListener(this);
 		pComponent1.add(btn2);
 		
-		btn3 = new JButton("JToggleButton");
-		pComponent1.add(btn3);
+		pCheckRadio = new JPanel();
+		pCheckRadio.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "JCheckBox & JRadioButton", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		contentPane.add(pCheckRadio);
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btn2) {
+			actionPerformedBtn2(e);
+		}
 		if (e.getSource() == btn1) {
 			actionPerformedBtn1(e);
 		}
@@ -179,6 +185,10 @@ public class SwingMain extends JFrame implements ActionListener {
 	}
 	protected void actionPerformedBtn1(ActionEvent e) {
 		JLabelEx frame = new JLabelEx();
+		frame.setVisible(true);
+	}
+	protected void actionPerformedBtn2(ActionEvent e) {
+		JButtonEx frame = new JButtonEx();
 		frame.setVisible(true);
 	}
 }
