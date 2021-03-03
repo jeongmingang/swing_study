@@ -71,7 +71,7 @@ public class JLabelEx extends JFrame implements MouseListener {
 	public void mouseReleased(MouseEvent e) {
 	}
 	protected void mouseClickedLblNorth(MouseEvent e) {
-		lblCenter.setIcon(new ImageIcon(path+"고양이.jpg"));
+		lblCenter.setIcon(new ImageIcon(path+"강아지.jpg"));
 		lblSouth.setText("010-1234-1234");
 		JOptionPane.showMessageDialog(null, "변경완료");
 	}
