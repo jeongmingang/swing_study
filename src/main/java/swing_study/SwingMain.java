@@ -14,6 +14,7 @@ import swing_study.component.JCheckBoxCustomEx;
 import swing_study.component.JCheckBoxEx;
 import swing_study.component.JLabelEx;
 import swing_study.component.JRadioButtonEX;
+import swing_study.component.JTextFieldAreaEx;
 import swing_study.frame.ContentPaneEx;
 import swing_study.frame.JpanelEx;
 import swing_study.layout.FrameLayout;
@@ -48,6 +49,8 @@ public class SwingMain extends JFrame implements ActionListener {
 	private JPanel pCheckRadio;
 	private JButton btn06;
 	private JButton btn07;
+	private JPanel pText;
+	private JButton btn08;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -68,7 +71,7 @@ public class SwingMain extends JFrame implements ActionListener {
 	private void initialize() {
 		setTitle("스윙 스터디");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(10, 10, 700, 450);
+		setBounds(10, 10, 700, 560);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -134,9 +137,20 @@ public class SwingMain extends JFrame implements ActionListener {
 		btn07 = new JButton("JRadioBox");
 		btn07.addActionListener(this);
 		pCheckRadio.add(btn07);
+		
+		pText = new JPanel();
+		pText.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "\uD14D\uC2A4\uD2B8\uD544\uB4DC", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		contentPane.add(pText);
+		
+		btn08 = new JButton("JTextField 관련예제");
+		btn08.addActionListener(this);
+		pText.add(btn08);
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btn08) {
+			actionPerformedBtn08(e);
+		}
 		if (e.getSource() == btn07) {
 			actionPerformedBtn07(e);
 		}
@@ -222,6 +236,10 @@ public class SwingMain extends JFrame implements ActionListener {
 	}
 	protected void actionPerformedBtn07(ActionEvent e) {
 		JRadioButtonEX frame = new JRadioButtonEX();
+		frame.setVisible(true);
+	}
+	protected void actionPerformedBtn08(ActionEvent e) {
+		JTextFieldAreaEx frame = new JTextFieldAreaEx();
 		frame.setVisible(true);
 	}
 }
