@@ -13,6 +13,7 @@ import swing_study.component.JButtonEx;
 import swing_study.component.JCheckBoxCustomEx;
 import swing_study.component.JCheckBoxEx;
 import swing_study.component.JLabelEx;
+import swing_study.component.JRadioButtonEX;
 import swing_study.frame.ContentPaneEx;
 import swing_study.frame.JpanelEx;
 import swing_study.layout.FrameLayout;
@@ -48,9 +49,6 @@ public class SwingMain extends JFrame implements ActionListener {
 	private JButton btn06;
 	private JButton btn07;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -64,9 +62,6 @@ public class SwingMain extends JFrame implements ActionListener {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public SwingMain() {
 		initialize();
 	}
@@ -137,10 +132,14 @@ public class SwingMain extends JFrame implements ActionListener {
 		pCheckRadio.add(btn06);
 		
 		btn07 = new JButton("JRadioBox");
+		btn07.addActionListener(this);
 		pCheckRadio.add(btn07);
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btn07) {
+			actionPerformedBtn07(e);
+		}
 		if (e.getSource() == btn06) {
 			actionPerformedBtn06(e);
 		}
@@ -220,5 +219,9 @@ public class SwingMain extends JFrame implements ActionListener {
 		
 		JCheckBoxCustomEx frame1 = new JCheckBoxCustomEx(list);
 		frame1.setVisible(true);
+	}
+	protected void actionPerformedBtn07(ActionEvent e) {
+		JRadioButtonEX frame = new JRadioButtonEX();
+		frame.setVisible(true);
 	}
 }
