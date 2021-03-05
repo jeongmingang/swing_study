@@ -139,7 +139,6 @@ public class JListEx3 extends JFrame implements ActionListener {
 		JOptionPane.showMessageDialog(null, message/* + "\n" + massage1 */);
 	}
 	
-	
 	protected void actionPerformedBtnUpdate(ActionEvent e) {
 		Department dept = deptList.getSelectedValue();
 		pLeftCenter.setDepartment(dept);
