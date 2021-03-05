@@ -15,6 +15,7 @@ import swing_study.component.JCheckBoxEx;
 import swing_study.component.JLabelEx;
 import swing_study.component.JListEx;
 import swing_study.component.JListEx2;
+import swing_study.component.JListEx3;
 import swing_study.component.JRadioButtonEX;
 import swing_study.component.JTextFieldAreaEx;
 import swing_study.frame.ContentPaneEx;
@@ -167,10 +168,14 @@ public class SwingMain extends JFrame implements ActionListener {
 		panel.add(btn10);
 		
 		btn11 = new JButton("JList예3");
+		btn11.addActionListener(this);
 		panel.add(btn11);
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btn11) {
+			actionPerformedBtn11(e);
+		}
 		if (e.getSource() == btn10) {
 			actionPerformedBtn10(e);
 		}
@@ -277,6 +282,10 @@ public class SwingMain extends JFrame implements ActionListener {
 	}
 	protected void actionPerformedBtn10(ActionEvent e) {
 		JListEx2 frame = new JListEx2();
+		frame.setVisible(true);
+	}
+	protected void actionPerformedBtn11(ActionEvent e) {
+		JListEx3 frame = new JListEx3();
 		frame.setVisible(true);
 	}
 }
