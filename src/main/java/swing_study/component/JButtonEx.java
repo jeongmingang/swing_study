@@ -1,27 +1,23 @@
 package swing_study.component;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.BoxLayout;
+import java.awt.Color;
 import java.awt.GridLayout;
-import javax.swing.JButton;
-import javax.swing.ImageIcon;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.awt.event.ActionEvent;
-import javax.swing.border.TitledBorder;
-import java.awt.FlowLayout;
+
+import javax.swing.BoxLayout;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JToggleButton;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
-import java.awt.Color;
-import javax.swing.JToggleButton;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
 
 @SuppressWarnings("serial")
 public class JButtonEx extends JFrame implements ActionListener {
+	@SuppressWarnings("unused")
 	private String imgPath = System.getProperty("user.dir") + File.separator + "imgPath" + File.separator;
 	
 	private JPanel contentPane;
@@ -32,7 +28,7 @@ public class JButtonEx extends JFrame implements ActionListener {
 		initialize();
 	}
 	private void initialize() {
-		setTitle("JButto & JToggleButten 예제");
+		setTitle("JButton & JToggleButton 예제");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 681, 408);
 		contentPane = new JPanel();
