@@ -17,8 +17,6 @@ import javax.swing.JPasswordField;
 import java.awt.Color;
 import java.awt.Font;
 import com.toedter.calendar.JDateChooser;
-import com.toedter.calendar.demo.DateChooserPanel;
-
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import java.awt.Dimension;

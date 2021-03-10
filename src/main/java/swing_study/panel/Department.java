@@ -5,8 +5,6 @@ public class Department {
 	private String deptName;
 	private int floor;
 
-//	private List<Employee> emplist;
-
 	public Department(int deptNo) {
 		this.deptNo = deptNo;
 	}
@@ -70,8 +68,7 @@ public class Department {
 
 	@Override
 	public String toString() {
-//		return String.format("[%s, %s, %s]", deptNo, deptName, floor);
-		return String.format("%s(%d)", deptName, deptNo);
+		return String.format("[%s, %s, %s]", deptNo, deptName, floor);
 	}
 
 }

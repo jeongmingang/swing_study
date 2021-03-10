@@ -1,13 +1,13 @@
 package swing_study.layout;
 
-import javax.swing.JPanel;
-import java.awt.GridLayout;
-import javax.swing.border.TitledBorder;
-import javax.swing.UIManager;
 import java.awt.Color;
-import javax.swing.JButton;
 import java.awt.FlowLayout;
-import javax.swing.SwingConstants;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.UIManager;
+import javax.swing.border.TitledBorder;
 
 @SuppressWarnings("serial")
 public class PanelFlow extends JPanel {
