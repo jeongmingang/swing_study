@@ -21,6 +21,7 @@ public class JSpinnerEx extends JFrame {
 		initialize();
 	}
 	private void initialize() {
+		setTitle("JSpinner 예제");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 506, 355);
 		contentPane = new JPanel();
