@@ -135,7 +135,15 @@ public class MyTablePanel extends JPanel {
 			}else {
 				setBackground(Color.WHITE);
 			}
-			setHorizontalAlignment(SwingConstants.RIGHT);
+			
+			switch(column) {
+					case 0: case 1:
+						setHorizontalAlignment(SwingConstants.CENTER);
+						break;
+					default :
+						setHorizontalAlignment(SwingConstants.RIGHT);
+			}
+			
 			return this;
 		}
 		
