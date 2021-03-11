@@ -50,7 +50,7 @@ public class MyCustomTable2Panel extends JPanel {
 	
 	public String[] getColumnNames() {
 		return new String[] {
-				"학번", "학생이름", "분반", "국어", "영어", "수학", "사회", "과학", "총합", "평균"};
+				"학번", "학생이름", "분반", "국어", "영어", "수학", "사회", "과학", "총점", "평균"};
 	}
 	
 	public void setList(List<Studentgrade2> stgList) {
